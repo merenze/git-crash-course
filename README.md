@@ -1,6 +1,8 @@
 # Introduction
 
 This is just a very basic crash course in Git fundamentals for version control and collaboration.
+It describes usage for some of the most common Git commands,
+as well as answering some questions I have had to research while working with Git.
 
 # Repositories
 
@@ -48,7 +50,7 @@ Git does not add any remotes when you initialize a repository.
 Git uses _commits_ for version control.
 A commit is basically a snapshot of the code at any given time.
 Commits have unique _hashes_, or IDs, and the entire history of commits is stored so the code can be _rolled back_ to any commit at any time.
-The history of commits can be viewed with `git log`.
+The history of commits is shown by `git log`.
 * For readability, `git log --oneline` may also be a helpful command, as the vital info for each commit is condensed to a single line.
 
 ## Staging
@@ -148,15 +150,17 @@ so before attempting this it is wise to back up your branch.
 If for some reason you need to amend an older commit, you can do so using an _interactive rebase_.
 * Interactive rebase: `git rebase -i <commit>`
 Find the lines with the commits you want to amend, and change `pick` to `edit`.
-Save and close the file and you are now rebasing.
+Save and close the file and you are now in rebase mode.
 
 Make any amends to the commits you want and move on with `git rebase --continue`.
 This likely will create conflicts in commits later in the history;
 you will have to resolve those conflicts and amend those commits as well.
+
+At any point during a rebase, you can use `git rebase --abort` to discard all changes caused by the rebase.
   
 ## Rolling back
 
-Each commit can be referenced by its unique hash, which can be viewed by running `git log`.
+Each commit can be referenced by its unique hash, which is shown by `git log`.
 Git also maintains a reference to your working commit, called `HEAD`.
 By default, `HEAD` points to the latest commit.
 
@@ -164,7 +168,7 @@ By default, `HEAD` points to the latest commit.
 
 When we _checkout_ a previous commit, we enter what is called _detached head state_,
 which allows us to safely examine the code at this commit without modifying anything at the latest commit.
-* Checkout a commit: `git checkout <commit-hash>`
+* Checkout a commit: `git checkout <commit>`
   * You do not need to include the entire hash (which is very long); the first 6-8 or so characters will do.
   * For all commands, in place of the hash, `HEAD~n` can be used to checkout _n_ commits older than `HEAD`;
     e.g., `git checkout HEAD~2`.
@@ -175,8 +179,8 @@ which allows us to safely examine the code at this commit without modifying anyt
 ### Reset
 
 When we _reset_ to a previous commit, we basically undo all commits since that commit.
-  * Reset: `git reset <commit-hash> [file]`
-    * Ommitting the file name is the same as `git reset <commit-hash> .`.
+  * Reset: `git reset <commit> [file]`
+    * Ommitting the file name is the same as `git reset <commit> .`.
 
 # Collaboration
 
