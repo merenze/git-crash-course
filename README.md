@@ -82,7 +82,7 @@ It is a good idea to check the diff before staging files in order to avoid commi
 It may also help you decide if the changes should be broken up across multiple commits.
 
 ### Ignoring changes
-Sometimes your project will include files that should _never_ be commited;
+Sometimes your project will include files that should _never_ be committed;
 for example, a configuration file, which may be different on every machine,
 or a file containing sensitive information such as a database password.
 
