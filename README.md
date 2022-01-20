@@ -118,7 +118,7 @@ You will be prompted to write a commit message using your system's default edito
 To skip this prompt, use `git commit [-m|--message] ["Commit message"]`.
 
 Commit messages should be succinct and descriptive, so that at a glance anyone can tell generally what the commit is meant to do.
-"Added <featurexyz>" is a good commit message. "Some changes" is not.
+"Added feature xyz" is a good commit message. "Some changes" is not.
 
 For the first commit of a project, "First commit" or "Initial commit" are common appropriate commit messages.
 
