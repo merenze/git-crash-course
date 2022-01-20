@@ -21,7 +21,8 @@ Typically, a repository is hosted at some network location.
 GitHub and GitLab are examples of sites that host Git projects;
 both will allow you to create unlimited free repositories.
 
-Users will _clone_ the remote repository to their local machine, make changes on their copy of the code, and then _push_ those changes back to the repository at the host.
+Users will _clone_ the remote repository to their local machine, make changes on their clone,
+and then _push_ those changes back to the repository at the host.
 Changes made to the host can be _fetched_ or _pulled_ to the clone.
 
 The host repository is _upstream_ of the clone; the clone is _downstream_ of the host.
@@ -81,6 +82,34 @@ It is a good idea to check the diff before staging files in order to avoid commi
 It may also help you decide if the changes should be broken up across multiple commits.
 
 ### Ignoring changes
+Sometimes your project will include files that should _never_ be commited;
+for example, a configuration file, which may be different on every machine,
+or a file containing sensitive information such as a database password.
+
+To permanently ignore these files, place their relative path names in a file named `.gitignore`.
+Git will never interact with any file named in a `.gitignore` file,
+will not show these files as either tracked or untracked in `git status`,
+and will not add them when using `git add` either implicitly or recursively.
+
+A `.gitignore` file can include paths to files located in subdirectories (e.g., `path/to/file`).
+Subdirectories may also contain their _own_ `.gitignore` files (e.g., `path/to/.gitignore`),
+which is often preferable in a larger project with a more complex directory structure.
+* By including an empty `.gitignore` in directory,
+  you can force that directory to be tracked for commits,
+  allowing you to maintain directory structure for a project that has otherwise empty directories.
+
+Git can ignore the `.gitignore` file, in which case it will have no effect.
+It _cannot_ ignore the `.git` file.
+
+The wildcard operator `*` means all files in the directory should be ignored, including `.gitignore` itself.
+The prefix `!` means to _not_ ignore the named file.
+
+The following `.gitignore` will ignore all files in the directory except `hello-world.txt` and `.gitignore`.
+```
+*
+!.gitignore
+!helloworld.txt
+```
 
 ## Committing
 
