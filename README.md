@@ -1,7 +1,6 @@
 # Introduction
-This is just a very basic guide to Git fundamentals for version control and collaboration.
 
-It is by no means exhaustive, but it can help you get your feet wet.
+This is just a very basic crash course in Git fundamentals for version control and collaboration.
 
 # Repositories
 
