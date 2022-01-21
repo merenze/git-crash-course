@@ -99,9 +99,7 @@ which is often preferable in a larger project with a more complex directory stru
 * By including an empty `.gitignore` in directory,
   you can force that directory to be tracked for commits,
   allowing you to maintain directory structure for a project that has otherwise empty directories.
-
-Git can ignore the `.gitignore` file, in which case it will have no effect.
-It _cannot_ ignore the `.git` file.
+* Git can ignore the `.gitignore` file, in which case it will have no effect.
 
 The wildcard operator `*` means all files in the directory should be ignored, including `.gitignore` itself.
 The prefix `!` means to _not_ ignore the named file.
