@@ -148,8 +148,8 @@ so before attempting this it is wise to back up your branch.
 
 If for some reason you need to amend an older commit, you can do so using an _interactive rebase_.
 * Interactive rebase: `git rebase -i <commit>`
-Find the lines with the commits you want to amend, and change `pick` to `edit`.
-Save and close the file and you are now in rebase mode.
+* Find the lines with the commits you want to amend, and change `pick` to `edit`.
+  Save and close the file and you are now in rebase mode.
 
 Make any amends to the commits you want and move on with `git rebase --continue`.
 This likely will create conflicts in commits later in the history;
