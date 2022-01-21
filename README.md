@@ -49,7 +49,7 @@ Git does not add any remotes when you initialize a repository.
 
 # Version control
 Git uses _commits_ for version control.
-A commit is basically a snapshot of the code at any given time.
+A commit is basically a snapshot of the project's file contents at any given time.
 Commits have unique _hashes_, or IDs, and the entire history of commits is stored so the code can be _rolled back_ to any commit at any time.
 The history of commits is shown by `git log`.
 * For readability, `git log --oneline` may also be a helpful command, as the vital info for each commit is condensed to a single line.
