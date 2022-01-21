@@ -92,7 +92,7 @@ or a file containing sensitive information such as a database password.
 To permanently ignore these files, place their relative path names in a file named `.gitignore`.
 Git will never interact with any file named in a `.gitignore` file,
 will not show these files as either tracked or untracked in `git status`,
-and will not add them when using `git add` either implicitly or recursively.
+and will not add them when using `git add` either explicitly or recursively.
 
 A `.gitignore` file can include paths to files located in subdirectories (e.g., `path/to/file`).
 Subdirectories may also contain their _own_ `.gitignore` files (e.g., `path/to/.gitignore`),
