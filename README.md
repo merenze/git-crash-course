@@ -26,12 +26,13 @@ both will allow you to create unlimited free repositories.
 Users will _clone_ the remote repository to their local machine, make changes on their clone,
 and then _push_ those changes back to the repository at the host.
 Changes made to the host can be _fetched_ or _pulled_ to the clone.
-
+* Clone a repository: `git clone <path/to/repository> [path/to/clone]`
+  * Ommitting the second argument will clone the project to a new directory in the working directory.
+    The clone directory will have the same name as the repository being cloned.    
+* The repository can be a path on the local machine (e.g., `git clone ~/projects/git-tutorial`),
+ or a network path (`git clone ssh://git@github.com:merenze/git-tutorial.git`).
+ 
 The host repository is _upstream_ of the clone; the clone is _downstream_ of the host.
-
-To clone a repository, execute the command `git clone <path/to/repository>`.
-This can be a path to a repository on the local machine (e.g., `git clone ~/projects/git-tutorial`),
-or a network path (`git clone ssh://git@github.com:merenze/git-tutorial.git`).
 
 ## Remotes
 
