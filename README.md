@@ -37,7 +37,7 @@ The host repository is _upstream_ of the clone; the clone is _downstream_ of the
 ## Remotes
 
 A _remote_ is an alias for a repository location; it helps us avoid having to type a long URL over and over.
-When you clone a repository, the default remote `origin` is added.
+When you clone a repository, the default remote `origin` will point to the repository that was cloned.
 Any time you use the word `origin` in a Git command, Git knows you mean the location from which the project was cloned.
 * Add a remote: `git remote add <remote-name> <path/to/remote-repository>`
 * Remove a remote: `git remote remove <remote-name>`
